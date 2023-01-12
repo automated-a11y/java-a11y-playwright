@@ -1,46 +1,45 @@
 
-package com.automated.a11y.modal.axe;
+package io.github.sridharbandi.modal.axe;
 
 import com.fasterxml.jackson.annotation.*;
 
 import javax.annotation.Generated;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "type",
-        "values"
+        "name",
+        "version"
 })
 @Generated("jsonschema2pojo")
-public class RunOnly {
+public class TestEngine {
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("values")
-    private List<String> values = null;
+    @JsonProperty("name")
+    private String name;
+    @JsonProperty("version")
+    private String version;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
+    @JsonProperty("name")
+    public String getName() {
+        return name;
     }
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
+    @JsonProperty("name")
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @JsonProperty("values")
-    public List<String> getValues() {
-        return values;
+    @JsonProperty("version")
+    public String getVersion() {
+        return version;
     }
 
-    @JsonProperty("values")
-    public void setValues(List<String> values) {
-        this.values = values;
+    @JsonProperty("version")
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     @JsonAnyGetter

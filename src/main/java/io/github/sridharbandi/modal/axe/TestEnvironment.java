@@ -1,5 +1,5 @@
 
-package com.automated.a11y.modal.axe;
+package io.github.sridharbandi.modal.axe;
 
 import com.fasterxml.jackson.annotation.*;
 

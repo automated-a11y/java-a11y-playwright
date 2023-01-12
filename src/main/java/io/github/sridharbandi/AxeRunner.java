@@ -1,10 +1,10 @@
-package com.automated.a11y;
+package io.github.sridharbandi;
 
-import com.automated.a11y.a11y.Engine;
-import com.automated.a11y.modal.axe.Issues;
-import com.automated.a11y.modal.htmlcs.Params;
-import com.automated.a11y.util.A11y;
 import com.microsoft.playwright.Page;
+import io.github.sridharbandi.a11y.Engine;
+import io.github.sridharbandi.modal.axe.Issues;
+import io.github.sridharbandi.modal.htmlcs.Params;
+import io.github.sridharbandi.util.A11y;
 
 import java.io.IOException;
 

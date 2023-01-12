@@ -1,4 +1,4 @@
-package com.automated.a11y.modal.htmlcs;
+package io.github.sridharbandi.modal.htmlcs;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

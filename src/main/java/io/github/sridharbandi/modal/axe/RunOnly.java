@@ -1,32 +1,46 @@
 
-package com.automated.a11y.modal.axe;
+package io.github.sridharbandi.modal.axe;
 
 import com.fasterxml.jackson.annotation.*;
 
 import javax.annotation.Generated;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "name"
+        "type",
+        "values"
 })
 @Generated("jsonschema2pojo")
-public class TestRunner {
+public class RunOnly {
 
-    @JsonProperty("name")
-    private String name;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("values")
+    private List<String> values = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("name")
-    public String getName() {
-        return name;
+    @JsonProperty("type")
+    public String getType() {
+        return type;
     }
 
-    @JsonProperty("name")
-    public void setName(String name) {
-        this.name = name;
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @JsonProperty("values")
+    public List<String> getValues() {
+        return values;
+    }
+
+    @JsonProperty("values")
+    public void setValues(List<String> values) {
+        this.values = values;
     }
 
     @JsonAnyGetter

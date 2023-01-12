@@ -1,11 +1,11 @@
-package com.automated.a11y;
+package io.github.sridharbandi;
 
-import com.automated.a11y.a11y.Engine;
-import com.automated.a11y.ftl.FtlConfig;
-import com.automated.a11y.modal.axe.Issues;
-import com.automated.a11y.util.A11y;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import io.github.sridharbandi.a11y.Engine;
+import io.github.sridharbandi.ftl.FtlConfig;
+import io.github.sridharbandi.modal.axe.Issues;
+import io.github.sridharbandi.util.A11y;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -22,7 +22,7 @@ public interface IRunner {
         List<?> issuesList = a11y.jsonReports(engine, clazz);
 
         issuesList.forEach(issues -> {
-            String id = engine.name().equalsIgnoreCase("axe") ? ((Issues) issues).getId() : ((com.automated.a11y.modal.htmlcs.Issues) issues).getId();
+            String id = engine.name().equalsIgnoreCase("axe") ? ((Issues) issues).getId() : ((io.github.sridharbandi.modal.htmlcs.Issues) issues).getId();
             a11y.save(tmplPage, issues, id, engine);
         });
 

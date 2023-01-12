@@ -1,4 +1,4 @@
-package com.automated.a11y.ftl;
+package io.github.sridharbandi.ftl;
 
 import freemarker.ext.beans.BeansWrapperBuilder;
 import freemarker.template.Configuration;

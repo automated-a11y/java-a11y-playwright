@@ -1,13 +1,13 @@
-package com.automated.a11y.util;
+package io.github.sridharbandi.util;
 
-import com.automated.a11y.a11y.Engine;
-import com.automated.a11y.modal.htmlcs.Issues;
-import com.automated.a11y.modal.htmlcs.Params;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import io.github.sridharbandi.a11y.Engine;
+import io.github.sridharbandi.modal.htmlcs.Issues;
+import io.github.sridharbandi.modal.htmlcs.Params;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -53,7 +53,7 @@ public class A11y {
         Path path = get("./target/java-a11y/" + engine.toString().toLowerCase() + "/json/" + UUID.randomUUID() + ".json");
         createDirectories(path.getParent());
         write(path, strResponse.getBytes(StandardCharsets.UTF_8));
-        Class<?> clazz = engine.name().equalsIgnoreCase("axe") ? com.automated.a11y.modal.axe.Issues.class : Issues.class;
+        Class<?> clazz = engine.name().equalsIgnoreCase("axe") ? io.github.sridharbandi.modal.axe.Issues.class : Issues.class;
         return mapper.readValue(strResponse, clazz);
     }
 

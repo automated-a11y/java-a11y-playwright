@@ -1,4 +1,4 @@
-package com.automated.a11y.modal.htmlcs;
+package io.github.sridharbandi.modal.htmlcs;
 
 public class Params {
 

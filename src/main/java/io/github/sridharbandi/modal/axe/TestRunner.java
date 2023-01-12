@@ -1,5 +1,5 @@
 
-package com.automated.a11y.modal.axe;
+package io.github.sridharbandi.modal.axe;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -9,16 +9,13 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "name",
-        "version"
+        "name"
 })
 @Generated("jsonschema2pojo")
-public class TestEngine {
+public class TestRunner {
 
     @JsonProperty("name")
     private String name;
-    @JsonProperty("version")
-    private String version;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -30,16 +27,6 @@ public class TestEngine {
     @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
-    }
-
-    @JsonProperty("version")
-    public String getVersion() {
-        return version;
-    }
-
-    @JsonProperty("version")
-    public void setVersion(String version) {
-        this.version = version;
     }
 
     @JsonAnyGetter
