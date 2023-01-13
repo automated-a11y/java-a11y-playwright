@@ -22,14 +22,20 @@ public class HtmlCsRunner implements IRunner {
         params = new Params();
     }
 
-    public void setStandard(HTMLCS standard) {
+    public HtmlCsRunner setStandard(HTMLCS standard) {
         this.standard = standard;
+        return this;
     }
 
-    public void setIgnoreCodes(String[] codes) {
+    public HtmlCsRunner setIgnoreCodes(String[] codes) {
         this.codes = codes;
+        return this;
     }
 
+    public HtmlCsRunner setPageTile(String pageTitle) {
+        params.setPageTitle(pageTitle);
+        return this;
+    }
 
     @Override
     public Issues execute() throws IOException {
