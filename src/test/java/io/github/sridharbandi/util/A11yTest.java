@@ -1,7 +1,6 @@
 package io.github.sridharbandi.util;
 
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.options.LoadState;
 import freemarker.template.Template;
 import io.github.sridharbandi.a11y.Engine;
 import io.github.sridharbandi.a11y.HTMLCS;
@@ -26,7 +25,6 @@ import java.util.Map;
 import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.doNothing;
 
 @ExtendWith(MockitoExtension.class)
 public class A11yTest {
@@ -44,13 +42,21 @@ public class A11yTest {
     }
 
     @Test
-    public void testExecute() throws Exception {
-        doNothing().when(page).waitForLoadState(LoadState.DOMCONTENTLOADED);
+    public void testHtmlCsExecute() throws Exception {
         Params params = new Params();
         params.setStandard(HTMLCS.WCAG2AA.name());
         a11y.execute(Engine.HTMLCS, params);
         a11y.jsonReports(Engine.HTMLCS, Issues.class);
         assertTrue(FileUtils.deleteQuietly(Objects.requireNonNull(new File("./target/java-a11y/htmlcs/json").listFiles())[0]));
+    }
+
+    @Test
+    public void testHtmlAxeExecute() throws Exception {
+        Params params = new Params();
+        params.setPageTitle("Page Title");
+        a11y.execute(Engine.AXE, params);
+        a11y.jsonReports(Engine.AXE, io.github.sridharbandi.modal.axe.Issues.class);
+        assertTrue(FileUtils.deleteQuietly(Objects.requireNonNull(new File("./target/java-a11y/axe/json").listFiles())[0]));
     }
 
     @Test
