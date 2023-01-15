@@ -22,7 +22,7 @@ public interface IRunner {
         List<?> issuesList = a11y.jsonReports(engine, clazz);
 
         issuesList.forEach(issues -> {
-            String id = engine.name().equalsIgnoreCase("axe") ? ((Issues) issues).getId() : ((Issues) issues).getId();
+            String id = engine.name().equalsIgnoreCase("axe") ? ((Issues) issues).getId() : ((io.github.sridharbandi.pw.modal.htmlcs.Issues) issues).getId();
             a11y.save(tmplPage, issues, id, engine);
         });
 
