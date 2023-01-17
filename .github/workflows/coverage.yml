@@ -5,8 +5,9 @@ on:
       - main
   pull_request:
     types: [ opened, synchronize, reopened ]
+
 jobs:
-  build:
+  test:
     name: Unit tests and Coverage
     runs-on: ubuntu-latest
     steps:
