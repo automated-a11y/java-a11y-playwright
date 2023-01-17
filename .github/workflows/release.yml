@@ -30,6 +30,7 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
   release:
     needs: publish
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

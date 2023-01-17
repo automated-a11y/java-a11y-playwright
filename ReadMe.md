@@ -23,6 +23,29 @@ to 80% issue coverage, or more, during development.
 4. Rich Reporting
 5. Open source
 
+### Usage
+
+For maven based project add the below dependency
+
+```xml
+
+<dependency>
+    <groupId>io.github.automated-a11y</groupId>
+    <artifactId>java-a11y-playwright</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
+For gradle based project add the below dependency
+
+```
+implementation group: 'io.github.automated-a11y', name: 'java-a11y-playwright', version: '1.0-SNAPSHOT'
+```
+
+For non gradle/maven project download the jar from below-mentioned link and add it to CLASSPATH for your project
+
+[https://github.com/automated-a11y/java-a11y-playwright/releases](https://github.com/automated-a11y/java-a11y-playwright/releases)
+
 ### Getting Started
 
 #### Using HTML CodeSniffer
