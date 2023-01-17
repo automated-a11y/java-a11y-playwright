@@ -22,7 +22,7 @@
         <jacoco.version>0.8.8</jacoco.version>
         <mavenshadeplugin.version>3.2.1</mavenshadeplugin.version>
         <nexusstagingplugin.version>1.6.13</nexusstagingplugin.version>
-        <gpgplugin.version>1.6</gpgplugin.version>
+        <gpgplugin.version>3.0.1</gpgplugin.version>
         <javadocplugin.version>3.4.1</javadocplugin.version>
         <mavensourceplugin.version>3.2.1</mavensourceplugin.version>
     </properties>
