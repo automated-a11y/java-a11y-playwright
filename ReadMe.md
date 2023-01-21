@@ -32,14 +32,14 @@ For maven based project add the below dependency
 <dependency>
     <groupId>io.github.automated-a11y</groupId>
     <artifactId>java-a11y-playwright</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
 For gradle based project add the below dependency
 
 ```
-implementation group: 'io.github.automated-a11y', name: 'java-a11y-playwright', version: '1.0-SNAPSHOT'
+implementation group: 'io.github.automated-a11y', name: 'java-a11y-playwright', version: '1.0.1'
 ```
 
 For non gradle/maven project download the jar from below-mentioned link and add it to CLASSPATH for your project
