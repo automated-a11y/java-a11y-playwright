@@ -27,7 +27,7 @@ public class Node {
     @JsonProperty("html")
     private String html;
     @JsonProperty("impact")
-    private Object impact;
+    private String impact;
     @JsonProperty("none")
     private List<Checks> none = null;
     @JsonProperty("target")
@@ -66,12 +66,12 @@ public class Node {
     }
 
     @JsonProperty("impact")
-    public Object getImpact() {
+    public String getImpact() {
         return impact;
     }
 
     @JsonProperty("impact")
-    public void setImpact(Object impact) {
+    public void setImpact(String impact) {
         this.impact = impact;
     }
 
