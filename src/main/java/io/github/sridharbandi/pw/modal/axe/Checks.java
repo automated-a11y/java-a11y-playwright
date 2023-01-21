@@ -10,7 +10,6 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "data",
         "id",
         "impact",
         "message",
@@ -19,8 +18,6 @@ import java.util.Map;
 @Generated("jsonschema2pojo")
 public class Checks {
 
-    @JsonProperty("data")
-    private Object data;
     @JsonProperty("id")
     private String id;
     @JsonProperty("impact")
@@ -28,19 +25,9 @@ public class Checks {
     @JsonProperty("message")
     private String message;
     @JsonProperty("relatedNodes")
-    private List<Object> relatedNodes = null;
+    private List<RelatedNode> relatedNodes = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    @JsonProperty("data")
-    public Object getData() {
-        return data;
-    }
-
-    @JsonProperty("data")
-    public void setData(Object data) {
-        this.data = data;
-    }
 
     @JsonProperty("id")
     public String getId() {
@@ -73,12 +60,12 @@ public class Checks {
     }
 
     @JsonProperty("relatedNodes")
-    public List<Object> getRelatedNodes() {
+    public List<RelatedNode> getRelatedNodes() {
         return relatedNodes;
     }
 
     @JsonProperty("relatedNodes")
-    public void setRelatedNodes(List<Object> relatedNodes) {
+    public void setRelatedNodes(List<RelatedNode> relatedNodes) {
         this.relatedNodes = relatedNodes;
     }
 
